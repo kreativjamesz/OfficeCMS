@@ -30,20 +30,18 @@
 
           <div class="field">
             <label for="password" class="label">Password</label>
-            <b-radio-group v-model="password_options">
               <div class="field">
-                <b-radio name="password_options" value="keep">Do Not Change Password</b-radio>
+                <b-radio v-model="password_options" name="password_options" value="keep">Do Not Change Password</b-radio>
               </div>
               <div class="field">
-                <b-radio name="password_options" value="auto">Auto-Generate New Password</b-radio>
+                <b-radio v-model="password_options" name="password_options" value="auto">Auto-Generate New Password</b-radio>
               </div>
               <div class="field">
-                <b-radio name="password_options" value="manual">Manually Set New Password</b-radio>
+                <b-radio v-model="password_options" name="password_options" value="manual">Manually Set New Password</b-radio>
                 <p class="control">
                   <input type="text" class="input" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password to this user">
                 </p>
               </div>
-            </b-radio-group>
           </div>
         </div> <!-- end of .column -->
 
