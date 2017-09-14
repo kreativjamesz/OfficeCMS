@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laratrust\Traits\LaratrustTraits;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
+    use LaratrustUserTraits;
     /**
      * The attributes that are mass assignable.
      *
