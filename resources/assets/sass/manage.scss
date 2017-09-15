@@ -8,6 +8,13 @@
   box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
 }
 
+&>.menu-list {
+  
+  &:hover>.sub-menu-list {
+    display:block
+  }
+}
+
 .management-area {
   position: absolute;
   top: 4rem;
