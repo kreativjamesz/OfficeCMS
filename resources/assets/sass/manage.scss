@@ -1,27 +1,49 @@
-.side-menu {
-  position: absolute;
-  top: 4rem;
-  bottom: 0;
-  width: 200px;
-  background-color: white;
-  overflow-y: auto;
-  box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
-}
 
-&>.menu-list {
-  
-  &:hover>.sub-menu-list {
-    display:block
-  }
+.side-menu {
+    position: absolute;
+    top: 4rem;
+    bottom: 0;
+    width: 200px;
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
+
+    // First Level
+    &>li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        &>a {
+            padding: 12px 5px 12px 15px;
+            display: block;
+        }
+    }
+}
+li.active {
+    &>.sub-menu-list {
+        display: block;
+    }
+}
+.sub-menu-list {
+    display:none;
+
+    &>li {
+        &>a {
+            &>i.fa {
+                margin-top:5px;
+            }
+        }
+    }
 }
 
 .management-area {
-  position: absolute;
-  top: 4rem;
-  left: 200px;
-  right: 0;
+    position: absolute;
+    top: 4rem;
+    left: 200px;
+    right: 0;
 }
 
 .flex-container {
-  margin: 10px 25px;
+    margin: 10px 25px;
 }

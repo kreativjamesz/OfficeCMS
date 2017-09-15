@@ -14,7 +14,7 @@
 
       <div class="card">
         <div class="card-content">
-          <table class="table is-narrow">
+          <table class="table is-narrow" style="width:100%">
             <thead>
               <tr>
                 <th>id</th>
@@ -32,7 +32,7 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->created_at->toFormattedDateString()}}</td>
-                  <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('users.show', $user->id)}}">View</a><a class="button is-light" href="{{route('users.edit', $user->id)}}">Edit</a></td>
+                  <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('users.show', $user->id)}}"><i class="fa fa-fw fa-search"></i> View</a><a class="button is-light" href="{{route('users.edit', $user->id)}}"><i class="fa fa-fw fa-pencil"></i> Edit</a></td>
                 </tr>
               @endforeach
             </tbody>

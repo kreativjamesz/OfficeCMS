@@ -9,7 +9,9 @@
 a.is-muted:hover{
   color: $grey !important;
 }
-
+.is-shown {
+  display:block !important;
+}
 /* ========================================
    =========== Dropdown Override ==========
    ======================================== */
@@ -111,4 +113,36 @@ button.nav-item {
 
 .nav {
   height: 4.5rem;
+}
+
+/* ========================================
+   ============== Menu List ===============
+   ======================================== */
+
+
+.menu-list {
+  line-height: 1.25;
+}
+
+.menu-list a {
+  border-radius: 2px;
+  color: #4a4a4a;
+  display: block;
+  padding: 0.5em 0.75em;
+}
+
+.menu-list a:hover {
+  background-color: whitesmoke;
+  color: #363636;
+}
+
+.menu-list a.is-active {
+  background-color: #00d1b2;
+  color: #fff;
+}
+
+.menu-list li ul {
+  border-left: 1px solid #dbdbdb;
+  margin: 0em !important;
+  padding-left: 0.75em;
 }

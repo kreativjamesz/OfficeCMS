@@ -20,6 +20,7 @@ Auth::routes();
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {
   	Route::get('/', 'ManageController@index');
   	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+  	Route::resource('/products','InventoryProductController');
   	Route::resource('/users', 'UserController');
   	Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
   	Route::resource('/roles', 'RoleController', ['except' => 'destroy']);

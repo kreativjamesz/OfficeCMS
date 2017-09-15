@@ -12,16 +12,24 @@ import Buefy from 'buefy';
 
 Vue.use(Buefy);
 
-// const app = new Vue({
-//    el: '#app',
-//    data: {
-//    
-// 	  }
-// });
+	// const app = new Vue({
+	//    el: '#app',
+	//    data: {
+	//    
+	// 	  }
+	// });
 
 $(document).ready(function() {
-  //  Dropdowns
-  $('.dropdown').hover(function(e) {
-    $(this).toggleClass('is-open')
-  })
+  	// Dropdowns
+  	$('.dropdown').hover(function(e) {
+	    $(this).toggleClass('is-open')
+  	});
+  	
+  	$( '.has-sub-menu-list' ).hover(function(){
+            $(this).children('.sub-menu-list').slideDown(400);
+        },
+        function(){
+            $(this).children('.sub-menu-list').slideUp(100);
+        }
+    );
 })

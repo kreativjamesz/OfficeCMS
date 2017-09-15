@@ -16130,6 +16130,10 @@ a.is-muted:hover {
   color: #7a7a7a !important;
 }
 
+.is-shown {
+  display: block !important;
+}
+
 /* ========================================
    =========== Dropdown Override ==========
    ======================================== */
@@ -16222,6 +16226,37 @@ button.nav-item.is-active {
 
 .nav {
   height: 4.5rem;
+}
+
+/* ========================================
+   ============== Menu List ===============
+   ======================================== */
+
+.menu-list {
+  line-height: 1.25;
+}
+
+.menu-list a {
+  border-radius: 2px;
+  color: #4a4a4a;
+  display: block;
+  padding: 0.5em 0.75em;
+}
+
+.menu-list a:hover {
+  background-color: whitesmoke;
+  color: #363636;
+}
+
+.menu-list a.is-active {
+  background-color: #00d1b2;
+  color: #fff;
+}
+
+.menu-list li ul {
+  border-left: 1px solid #dbdbdb;
+  margin: 0em !important;
+  padding-left: 0.75em;
 }
 
 .m-t-5 {
@@ -16717,6 +16752,30 @@ button.nav-item.is-active {
   overflow-y: auto;
   -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
           box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+}
+
+.side-menu > li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu > li > a {
+  padding: 12px 5px 12px 15px;
+  display: block;
+}
+
+li.active > .sub-menu-list {
+  display: block;
+}
+
+.sub-menu-list {
+  display: none;
+}
+
+.sub-menu-list > li > a > i.fa,
+.icon .sub-menu-list > li > a > i.mdi {
+  margin-top: 5px;
 }
 
 .management-area {
