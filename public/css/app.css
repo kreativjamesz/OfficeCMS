@@ -16743,6 +16743,36 @@ button.nav-item.is-active {
   width: 100%;
 }
 
+/***************/
+
+/* ID SIDE BAR */
+
+/***************/
+
+#sidebar {
+  background-color: #eee;
+  padding-left: 0;
+  float: left;
+  min-height: 100%;
+}
+
+#sidebar > .collapse.in {
+  display: inline;
+}
+
+#sidebar > .nav > li > a {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Media Breakpoint for TABLET */
+
+/*******************/
+
+/* CLASS SIDE MENU */
+
+/*******************/
+
 .side-menu {
   position: absolute;
   top: 4rem;
