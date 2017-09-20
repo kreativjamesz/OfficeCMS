@@ -1,39 +1,48 @@
-<div class="row row-offcanvas row-offcanvas-left">
-    <!-- sidebar -->
-    <div class="column col-sm-3 col-xs-1 sidebar-offcanvas" id="sidebar">
-        <ul class="nav" id="menu">
-            <li><a href="#"><i class="fa fa-list-alt"></i> <span class="collapse in hidden-xs">Link 1</span></a></li>
-            <li><a href="#"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Stories</span></a></li>
-            <li><a href="#"><i class="fa fa-paperclip"></i> <span class="collapse in hidden-xs">Saved</span></a></li>
-            <li><a href="#"><i class="fa fa-refresh"></i> <span class="collapse in hidden-xs">Refresh</span></a></li>
-            <li>
-                <a href="#" data-target="#item1" data-toggle="collapse"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Menu <span class="caret"></span></span></a>
-                <ul class="nav nav-stacked collapse left-submenu" id="item1">
-                    <li><a href="google.com">View One</a></li>
-                    <li><a href="gmail.com">View Two</a></li>
+<div class="nav-side-menu">
+    {{-- <div class="brand">Brand Logo</div> --}}
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li><a href="{{route('manage.dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                <a href="#"><i class="fa fa-cubes fa-lg"></i> Products <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <li><a href="{{route('products.create')}}">Add New Product</a></li>
+                    <li><a href="">Stock Items</a></li>
+                    <li><a href="">Upload CSV File</a></li>
+                    <li><a  href="">Category</a></li>
+                </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="service">
+                    <li>New Service 1</li>
+                    <li>New Service 2</li>
+                    <li>New Service 3</li>
+                </ul>
+            </li>
+
+
+            <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="new">
+                    <li>New New 1</li>
+                    <li>New New 2</li>
+                    <li>New New 3</li>
                 </ul>
             </li>
             <li>
-                <a href="#" data-target="#item2" data-toggle="collapse"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Menu <span class="caret"></span></span></a>
-                <ul class="nav nav-stacked collapse" id="item2">
-                    <li><a href="#">View One</a></li>
-                    <li><a href="#">View Two</a></li>
-                    <li><a href="#">View Three</a></li>
-                </ul>
+                <a href="#">
+                    <i class="fa fa-user fa-lg"></i> Profile
+                </a>
             </li>
-            <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> <span class="collapse in hidden-xs">Link</span></a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users fa-lg"></i> Users
+                </a>
+            </li>
         </ul>
     </div>
-    <!-- /sidebar -->
-
-    <!-- main right col -->
-    <div class="column col-sm-9 col-xs-11" id="main">
-        <p><a href="#" data-toggle="offcanvas"><i class="fa fa-navicon fa-2x"></i></a></p>
-        <p>
-            Main content...
-        </p>
-    </div>
-    <!-- /main -->
 </div>
 {{-- <div class="side-menu">
     <aside class="menu m-t-30 m-l-10">

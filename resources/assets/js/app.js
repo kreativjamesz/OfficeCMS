@@ -32,4 +32,5 @@ $(document).ready(function() {
             $(this).children('.sub-menu-list').slideUp(100);
         }
     );
+
 })
